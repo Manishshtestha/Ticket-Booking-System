@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="TicketBookingSystem.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link href="FontAwesome/CSS/all.min.css" rel="stylesheet" />
+    <link href="CSS/Design.css" rel="stylesheet" />
+    <link href="CSS/Inclusions.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav>
+            <a href="homepage.aspx">
+                <img src="Images/Designer_1_-removebg-preview.png" /></a>
+            <div class="mid">
+                <div class="top">
+                    <ul>
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Concerts</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sport</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Festival</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Theatre</asp:LinkButton>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <asp:LinkButton ID="LinkButton13" runat="server" Visible="false" OnClick="LinkButton13_Click">My Tickets</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton10" runat="server" Visible="false" OnClick="LinkButton10_Click">Add Events</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton8" runat="server" Visibile="false" OnClick="LinkButton8_Click">Update Events</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton9" runat="server" Visible="false" OnClick="LinkButton9_Click">Remove Events</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton11" runat="server" Visible="false" OnClick="LinkButton11_Click">Add User</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton12" runat="server" Visible="false" OnClick="LinkButton12_Click">Remove User</asp:LinkButton>
+                </div>
+            </div>
+            <ul class="login_out">
+                <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Sign In</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Logout</asp:LinkButton>
+            </ul>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer style="display: flex;justify-content:center;gap:15px;bottom:0;position:sticky;">
+            <a href="homepage.aspx">Home</a>
+            <a href="about.aspx">About</a>
+            <a href="concerts.aspx">Concert</a>
+            <a href="sports.aspx">Sports</a>
+            <a href="festivals.aspx">Festivals</a>
+            <a href="theatre.aspx">Theatre</a>
+        </footer>
+    </form>
+</body>
+</html>
